@@ -45,7 +45,7 @@ def read_evtest_output(process, expected_ble_scancode, expected_linux_keycode):
                 value = match.group(5)
 
                 if "EV_MSC" in type_description: #BLE-scancode
-                    if str(expected_ble_scancode) in value.lower():
+                    if str(expected_ble_scancode).lower() in value:
                         ret_ble = True
                         continue
                     else:
