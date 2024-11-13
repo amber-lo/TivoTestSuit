@@ -30,7 +30,7 @@ if __name__ == "__main__":
             item['ble_result'] = ret_ble
             item['linux_result'] = ret_linux
         elif args.device == "IR":
-            ret_ir, ret_linux = test_ir_key(item['key_name'], item['ir_scancode'], item['linux_keycode'])
+            ret_ir, ret_linux = test_ir_key(device, item['key_name'], item['ir_scancode'], item['linux_keycode'])
             item['ir_result'] = ret_ir
             item['linux_result'] = ret_linux
 
